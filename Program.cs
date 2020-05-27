@@ -36,24 +36,29 @@ namespace AulaPOOCelular
             inicio:
             Console.WriteLine("Se deseja fazer uma ligação digite [ligar], caso queira efetuar outra tarefa espere alguns segundos...");
             Console.WriteLine();
-            Thread.Sleep(6000);
-            Console.WriteLine("Ok, você prefere mensagem né?Então digite [msg] e a envie,beleza desisto de você espere mais alguns segundos... ");
+            Thread.Sleep(4000);
+            Console.WriteLine("Ok, você prefere mensagem né?Então digite [msg] e a envie");
             Console.WriteLine();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Console.WriteLine("Agora eu acertei você deseja desligar o sistema correto?Então digite [off]");
 
             
             switch (Console.ReadLine())
            {
                case "msg":
-                    Console.WriteLine("Digite uma mensagem [aoba]");
+                    Console.WriteLine("Digite uma mensagem");
                     galaxy.mensagem(Console.ReadLine());
                     Console.WriteLine("Mensagem enviada");
+                    Thread.Sleep(200);
+                    Console.Clear();
                     goto inicio;
                     break;
                 case "ligar":
                     Console.WriteLine("Digite o numero para ligaçao");
                     galaxy.ligar(Console.ReadLine());
+                    Console.WriteLine("Ligação efetuada");
+                    Thread.Sleep(200);
+                    Console.Clear();
                     goto inicio;
                     break;
                 case "off":

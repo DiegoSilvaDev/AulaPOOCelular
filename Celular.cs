@@ -29,7 +29,7 @@ namespace AulaPOOCelular
             
         }
         public string mensagem(string msg){
-            if(msg == "aoba"){
+            if(status){
                 status = true;
                 return "Sua mensagem foi enviada com sucesso!";
             }else{
