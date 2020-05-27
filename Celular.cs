@@ -22,7 +22,6 @@ namespace AulaPOOCelular
         public string ligar(string numero){
             if(status){
                 return "sua ligação foi efetuada com sucesso";
-
             }else{
                 return "sua ligação teve algum erro na digitação iremos reiniciar o sistema";
             
@@ -30,10 +29,12 @@ namespace AulaPOOCelular
             
         }
         public string mensagem(string msg){
-            if(msg == ""){
+            if(msg == "aoba"){
+                status = true;
                 return "Sua mensagem foi enviada com sucesso!";
             }else{
-                msg = "ijsadjiadsdp";
+                msg = "";
+                status = false;
                 return "favor envie novamente, sua mensagem contem algum erro de digitação";
             }
         }
